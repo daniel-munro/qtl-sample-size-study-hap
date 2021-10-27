@@ -1,0 +1,19 @@
+crosstype: hs
+sep: ','
+na.strings: ['-', NA]
+comment.char: '#'
+geno: geno.csv
+founder_geno: founder_geno.csv
+gmap: gmap.csv
+pmap: pmap.csv
+pheno: pheno.csv
+covar: covar.csv
+genotypes:
+  A: 1
+  H: 2
+  B: 3
+alleles: [ACI, BN, BUF, F344, M520, MR, WKY, WN]
+geno_transposed: yes
+founder_geno_transposed: yes
+cross_info:
+  covar: generations
