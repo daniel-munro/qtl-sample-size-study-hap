@@ -60,7 +60,7 @@ refs = {}
 for rec in vcf.fetch():
     ID = rec.id if rec.id is not None else f'{rec.contig}:{rec.pos}'
     if IDs is None or ID in IDs:
-        gt = [s['GT'] for s in rec.samples.values()]
+        gt = [rec.samples[sample]['GT'] for sample in samples]
         labels = [genotype_code(g, founder=False) for g in gt]
         genos[ID] = labels
         refs[ID] = rec.ref
@@ -76,7 +76,7 @@ remove = set()
 for rec in vcf.fetch():
     ID = rec.id if rec.id is not None else f'{rec.contig}:{rec.pos}'
     if IDs is None or ID in IDs:
-        gt = [s['GT'] for s in rec.samples.values()]
+        gt = [rec.samples[strain]['GT'] for strain in strains]
         labels = [genotype_code(g, founder=True) for g in gt]
         founder_genos[ID] = labels
         # assert rec.ref == refs[ID]
