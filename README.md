@@ -1,4 +1,11 @@
-# haplotype-mapping
+# qtl-sample-size-study-hap
+
+Code for the founder haplotype-phenotype association analysis for the QTL sample size study
+
+See [An exponential increase in QTL detection with an increased sample size](https://doi.org/10.1093/genetics/iyad054)
+
+The study investigated the relationship between sample size and GWAS QTLs discovered in outbred rats. To complement the findings for SNP-based GWAS, we also used the SNPs to infer founder haplotypes, map phenotypes to them at different sample sizes, and again examine the sample size-QTL relationship.
+
 ### Estimate founder haplotypes and map phenotypes to them
 
 Run `run.sh` or single commands within it as needed.
